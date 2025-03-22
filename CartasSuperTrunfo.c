@@ -10,11 +10,13 @@ int main() {
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     char estado1, estado2;
     char carta1[5], carta2[5];
-    char cidade1[20], cidade2[20]; // Corrigido: nomes diferentes para as cidades
+    char cidade1[20], cidade2[20]; 
     int pop1, pop2;
     float area1, area2;
     float pib1, pib2;
     int pontos1, pontos2;
+    float densi1, densi2;
+    float pibpercap1, pibpercap2;
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -37,7 +39,7 @@ int main() {
     scanf(" %f", &area1); // Coleta a área da cidade
 
     printf("Qual o PIB da cidade?\n"); // Pede ao usuário o PIB da cidade
-    scanf(" %f", &pib1); // Coleta o PIB da cidade
+    scanf(" R$%fbi ", &pib1); // Coleta o PIB da cidade
 
     printf("Qual o número de pontos turísticos da cidade?\n"); // Pede ao usuário o número de pontos turísticos da cidade
     scanf(" %d", &pontos1); // Coleta o número de pontos turísticos da cidade
@@ -59,10 +61,16 @@ int main() {
     scanf(" %f", &area2);
 
     printf("Qual o PIB da cidade?\n");
-    scanf(" %f", &pib2);
+    scanf(" R$%fbi", &pib2);
 
     printf("Qual o número de pontos turísticos da cidade?\n");
     scanf(" %d", &pontos2);
+
+    //Manipulação de variáveis:
+    densi1 = pop1 / area1;
+    densi2 = pop2 / area2;
+    pibpercap1 = pib1 / pop1;
+    pibpercap2 = pib2 / pop2;
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -75,7 +83,9 @@ int main() {
     printf("População: %d\n", pop1);
     printf("Área: %.2f\n", area1);
     printf("PIB: %.2f\n", pib1);
-    printf("Pontos Turísticos: %d\n\n", pontos1);
+    printf("Pontos Turísticos: %d\n", pontos1);
+    printf("Densidade Populacional: %.2f\n", densi1);
+    printf("PIB per capita: %.2f\n\n\n", pibpercap1);
 
     printf("Carta 2:\n");
     printf("Estado: %c\n", estado2);
@@ -84,7 +94,9 @@ int main() {
     printf("População: %d\n", pop2);
     printf("Área: %.2f\n", area2);
     printf("PIB: %.2f\n", pib2);
-    printf("Pontos Turísticos: %d\n\n\n", pontos2);
+    printf("Pontos Turísticos: %d\n", pontos2);
+    printf("Densidade Populacional: %.2f\n", densi2);
+    printf("PIB per capita: %.2f\n\n\n", pibpercap2);
 
 
     return(0);
