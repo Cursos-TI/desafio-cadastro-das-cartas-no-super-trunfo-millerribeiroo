@@ -130,7 +130,7 @@ int main() {
     printf("Pontos Turísticos: %s Ganhou.(%d)\n", cidade1, pontos);
     printf("Densidade Populacional: %s Ganhou.(%d)\n", cidade2, densi);
     printf("PIB per Capita: %s Ganhou.(%d)\n", cidade1, pibpercap);
-    printf("Super Poder: %s Ganhou.(%d)\n\n\n", cidade2, superpoder);
+    printf("Super Poder: %s Ganhou.(%.2f)\n\n\n", cidade2, superpoder);
 
 
     return(0);
