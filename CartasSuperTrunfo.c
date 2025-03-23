@@ -19,6 +19,7 @@ int main() {
     float densi1, densi2;
     float pibpercap1, pibpercap2;
     int pop, area, pib, pontos, densi, pibpercap;
+    
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
@@ -117,6 +118,7 @@ int main() {
     pontos = pontos1 > pontos2;
     densi = densi1 < densi2;
     pibpercap = pibpercap1 > pibpercap2;
+    superpoder = superpoder1 > superpoder2;
 
     // Exibindo o resultado da comparação
     printf("Resultado da comparação:\n\n");
@@ -125,7 +127,8 @@ int main() {
     printf("PIB: %s Ganhou.(%d)\n", cidade1, pib);
     printf("Pontos Turísticos: %s Ganhou.(%d)\n", cidade1, pontos);
     printf("Densidade Populacional: %s Ganhou.(%d)\n", cidade2, densi);
-    printf("PIB per Capita: %s Ganhou.(%d)\n\n\n", cidade1, pibpercap);
+    printf("PIB per Capita: %s Ganhou.(%d)\n", cidade1, pibpercap);
+    printf("Super Poder: %s Ganhou.(%d)\n\n\n", cidade1, superpoder);
 
 
     return(0);
